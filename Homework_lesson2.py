@@ -65,4 +65,42 @@
 # Вывести каждое слово с новой строки. Строки нужно пронумеровать.
 # Если слово длинное, выводить только первые 10 букв в слове.
 
+# split_list=[]
+# entry_string=input("Enter string: ")
+# split_list=entry_string.split(" ")
+# for num, element in enumerate(split_list):
+#     print(num,element)
+
+# -----------------------------------------------------------------
+
+# 5 Реализовать структуру «Рейтинг», представляющую собой набор натуральных чисел,
+# который не возрастает. У пользователя нужно запрашивать новый элемент рейтинга.
+# Если в рейтинге существуют элементы с одинаковыми значениями, то новый элемент с
+# тем же значением должен разместиться после них.
+
+# my_list5= [7,5,3,3,2]
+# new_el=int(input("Enter new element: "))
+# my_list5.append(new_el)
+# my_list5.sort(reverse=True)
+# print(my_list5)
+
+# 6 *Реализовать структуру данных «Товары».
+# product_dict={} # dictionary with all the products
+# tuple_line=() # tuple that records dictionary and countes number of lines
+# tovary_db_list=[] # list that holds both tuple and dictionary
+#
+# number_of_lines=int(input("How many products you want to entry?"))
+# for iter in range(number_of_lines):
+#
+#     product_name = input("Enter the product name:")
+#     product_price = int(input("Enter product price: "))
+#     product_quantity = int(input("Enter product quantity:"))
+#     product_units = input("Enter unit of measurement:")
+#     product_dict={"Product name" : product_name, "Product price" : product_price, "Product quantity": product_quantity, "Product units":product_units }
+#     tuple_line=(iter,product_dict)
+#     tovary_db_list.append(tuple_line)
+# print(tovary_db_list)
+
+
+
 
