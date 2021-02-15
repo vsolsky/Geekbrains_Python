@@ -1,0 +1,6 @@
+Ivanov 19000
+Petrov 30000
+Smith 10000
+Goederie 40000
+Samuel 16400
+Sept 21000
