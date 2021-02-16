@@ -14,8 +14,12 @@ with open ("Homework5_3.txt", "r") as f_obj:
 
 avg_salaries=dict1.values() #в задании не понятно для всех сотрудников считать среднее или только для <20k, посчитал для
                             # тех что меньше 20к
-print(f"Employees with salary below 20 000:{dict1}") # как вывести словарь без скобок?
+
 print(f"Average salary of employees with salary <20 000: {round(sum(avg_salaries)/len(avg_salaries),2)}")
+
+print(f"Employees with salary below 20 000:\n")
+for el in dict1:
+    print(el, dict1[el])
 
 
 
