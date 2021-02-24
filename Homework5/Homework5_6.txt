@@ -1,0 +1,3 @@
+Physics: 100 (l) - 50 (h) - 10 (p)
+Literature: 50 (l) - 20 (h) -
+English: - 20 (h) -
