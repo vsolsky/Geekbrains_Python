@@ -4,9 +4,8 @@ class Matrix:
     def __init__(self, matr):
         self.matr=matr
     def __str__(self):
-        for line in range(len(self.matr)):
-            #return str(self.matr[line])
-            print('{}'.format(self.matr[line]))
+        for line in self.matr:
+            print(line)
     def __add__(self, other):
         matr3=[]
         self.matr1=matr1
