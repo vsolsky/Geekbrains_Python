@@ -16,15 +16,19 @@ class Suit(Clothing):
     def material_usage (self,height_suit):
         return round(2*height_suit+0.3,2)
 class Coat(Clothing):
-    def material_usage(self,size_coat):
-        return round(size_coat/6.5+0.5,2)
+    @property
+    def material_usage(self):
+        return round(self.size_coat/6.5+0.5,2)
+    @material_usage.setter
+    def material_usage(self, size_coat):
+        self.size_coat=size_coat
 
 suit=Suit()
 coat=Coat()
 height_suit=int(input("Enter your height for suit: "))
-size_coat=int(input("Enter your size for coat: "))
+coat.size_coat=int(input("Enter your size for coat: "))
 
 print(suit.material_usage(height_suit))
-print(coat.material_usage(size_coat))
+print(coat.material_usage)
 
 
