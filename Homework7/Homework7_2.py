@@ -6,32 +6,25 @@
 # для костюма (2*H + 0.3). Проверить работу этих методов на реальных данных.
 # Реализовать общий подсчет расхода ткани. Проверить на практике полученные на этом уроке знания:
 # реализовать абстрактные классы для основных классов проекта, проверить на практике работу декоратора @property.
+from abc import ABC, abstractmethod
 
-# класс Auto
-class Auto:
+class Clothing (ABC):
+    @abstractmethod
+    def material_usage (self,size):
+        pass
+class Suit(Clothing):
+    def material_usage (self,height_suit):
+        return round(2*height_suit+0.3,2)
+class Coat(Clothing):
+    def material_usage(self,size_coat):
+        return round(size_coat/6.5+0.5,2)
 
-    # конструктор класса Auto
-    def __init__(self, year_v):
-        # Инициализация свойств.
-        self.year = year_v
+suit=Suit()
+coat=Coat()
+height_suit=int(input("Enter your height for suit: "))
+size_coat=int(input("Enter your size for coat: "))
 
-    # создаем свойство года
-    @property
-    def year(self):
-        return self.__year
+print(suit.material_usage(height_suit))
+print(coat.material_usage(size_coat))
 
-    # сеттер для создания свойств
-    @year.setter
-    def year(self, year):
-        if year < 2000:
-            self.__year = 2000
-        elif year > 2019:
-            self.__year = 2019
-        else:
-            self.__year = year
 
-    def get_auto_year(self):
-        return f"Автомобиль выпущен в {str(self.year)} году"
-
-a = Auto(2090)
-print(a.get_auto_year())
