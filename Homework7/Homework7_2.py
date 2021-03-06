@@ -17,7 +17,7 @@ class Suit(Clothing):
         return round(2*height_suit+0.3,2)
 class Coat(Clothing):
     @property
-    def material_usage(self):
+    def material_usage(self): #removed second nput variable as we pass it in the setter part.
         return round(self.size_coat/6.5+0.5,2)
     @material_usage.setter
     def material_usage(self, size_coat):
@@ -26,9 +26,9 @@ class Coat(Clothing):
 suit=Suit()
 coat=Coat()
 height_suit=int(input("Enter your height for suit: "))
-coat.size_coat=int(input("Enter your size for coat: "))
+coat.size_coat=int(input("Enter your size for coat: ")) # using property decorator
 
 print(suit.material_usage(height_suit))
-print(coat.material_usage)
+print(coat.material_usage) #using @property decorator
 
 
